@@ -1,0 +1,23 @@
+<h2>Client List</h2>
+<p>This is a mock table of clients:</p>
+<table border="1">
+  <tr><th>Name</th><th>Email</th><th>Phone</th><th>Actions</th></tr>
+  <tr>
+    <td>Jane Doe</td>
+    <td>jane@example.com</td>
+    <td>555-1234</td>
+    <td>
+      <a [routerLink]="['/dashboard/clients', 1]">View</a> |
+      <a [routerLink]="['/dashboard/clients', 1, 'edit']">Edit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>John Smith</td>
+    <td>john@example.com</td>
+    <td>555-5678</td>
+    <td>
+      <a [routerLink]="['/dashboard/clients', 2]">View</a> |
+      <a [routerLink]="['/dashboard/clients', 2, 'edit']">Edit</a>
+    </td>
+  </tr>
+</table> 

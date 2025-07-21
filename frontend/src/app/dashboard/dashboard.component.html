@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li><a routerLink="clients" routerLinkActive="active">Client List</a></li>
+    <li><a routerLink="clients/add" routerLinkActive="active">Add Client</a></li>
+    <li><a routerLink="export" routerLinkActive="active">Export Data</a></li>
+    <li><a routerLink="activity-log" routerLinkActive="active">Activity Log</a></li>
+    <li><a (click)="logout()">Logout</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet> 

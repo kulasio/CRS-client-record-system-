@@ -1,0 +1,48 @@
+<div class="auth-container">
+  <div class="auth-logo">
+    <!-- You can replace this with your logo SVG or image -->
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#6366f1"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" dy=".3em">CRS</text></svg>
+  </div>
+  <div class="auth-title">Client Record System</div>
+
+  <div *ngIf="mode === 'login'">
+    <h2 style="margin-bottom: 1rem;">Login</h2>
+    <form (ngSubmit)="login()">
+      <label>
+        Username:
+        <input type="text" [(ngModel)]="username" name="username" required />
+      </label>
+      <label>
+        Password:
+        <input type="password" [(ngModel)]="password" name="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <p>Don't have an account? <a href="#" (click)="mode = 'signup'; $event.preventDefault()">Sign up</a></p>
+  </div>
+
+  <div *ngIf="mode === 'signup'">
+    <h2 style="margin-bottom: 1rem;">Sign Up</h2>
+    <form (ngSubmit)="signup()">
+      <label>
+        Username:
+        <input type="text" [(ngModel)]="signupUsername" name="signupUsername" required />
+      </label>
+      <label>
+        Email:
+        <input type="email" [(ngModel)]="signupEmail" name="signupEmail" required />
+      </label>
+      <label>
+        Password:
+        <input type="password" [(ngModel)]="signupPassword" name="signupPassword" required />
+      </label>
+      <label>
+        Confirm Password:
+        <input type="password" [(ngModel)]="signupConfirm" name="signupConfirm" required />
+      </label>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" (click)="mode = 'login'; $event.preventDefault()">Login</a></p>
+  </div>
+</div> 
