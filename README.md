@@ -1,11 +1,11 @@
 # Client Record System
 
-A simple, modern web application to manage and record client information for small businesses. Built with React (frontend), Express/Node.js (backend), and SQLite (database).
+A simple, modern web application to manage and record client information for small businesses. Built with Angular (frontend), Express/Node.js (backend), and SQLite (database).
 
 ---
 
 ## 📋 Project Overview
-This system allows users to add, view, edit, and delete client records for future reference. Designed for ease of use, data security, and future extensibility.
+This system allows admin to add, view, edit, and delete client records for future reference. Designed for ease of use, data security, and future extensibility.
 
 ---
 
@@ -20,7 +20,7 @@ This system allows users to add, view, edit, and delete client records for futur
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend:** React (with Vite or Create React App)
+- **Frontend:** Angular
 - **Backend:** Node.js + Express
 - **Database:** SQLite (via better-sqlite3 or sqlite3 npm package)
 - **API:** RESTful endpoints
@@ -31,7 +31,7 @@ This system allows users to add, view, edit, and delete client records for futur
 ```
 Client Record System/
   backend/        # Express API & database
-  frontend/       # React app
+  frontend/       # Angular app
   README.md       # Project documentation
 ```
 
@@ -56,12 +56,23 @@ npm start
 ### 3. Frontend Setup
 ```bash
 cd ../frontend
+# Scaffold Angular app in a subdirectory
+npx -p @angular/cli ng new client-app --skip-git --skip-install --defaults
+# Move contents up (if desired)
+# On Unix/macOS:
+mv client-app/* .
+mv client-app/.* . 2>/dev/null || true
+rmdir client-app
+# On Windows, move files manually or use File Explorer
 npm install
-npm start
 ```
 
-### 4. Access the App
-- Open your browser at [http://localhost:3000](http://localhost:3000)
+### 4. Start the Angular App
+```bash
+npx ng serve
+```
+
+- Open your browser at [http://localhost:4200](http://localhost:4200)
 
 ---
 
