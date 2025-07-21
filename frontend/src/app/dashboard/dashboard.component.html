@@ -1,10 +1,15 @@
-<nav>
-  <ul>
-    <li><a routerLink="clients" routerLinkActive="active">Client List</a></li>
-    <li><a routerLink="clients/add" routerLinkActive="active">Add Client</a></li>
-    <li><a routerLink="export" routerLinkActive="active">Export Data</a></li>
-    <li><a routerLink="activity-log" routerLinkActive="active">Activity Log</a></li>
-    <li><a (click)="logout()">Logout</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet> 
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-title">Admin Dashboard</div>
+    <nav>
+      <a routerLink="clients" routerLinkActive="active">Client List</a>
+      <a routerLink="clients/add" routerLinkActive="active">Add Client</a>
+      <a routerLink="export" routerLinkActive="active">Export Data</a>
+      <a routerLink="activity-log" routerLinkActive="active">Activity Log</a>
+      <a (click)="logout()" class="logout">Logout</a>
+    </nav>
+  </aside>
+  <main class="dashboard-content">
+    <router-outlet></router-outlet>
+  </main>
+</div> 
